@@ -65,6 +65,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 const HomePage = () => {
   return (
@@ -146,12 +147,14 @@ const HomePage = () => {
                 required
               />
             </div>
+            <Link href='/home-page'>
             <button
               type="submit"
               className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full"
             >
               Register
             </button>
+            </Link>
           </form>
         </div>
       </main>
