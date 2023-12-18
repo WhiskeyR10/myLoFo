@@ -167,30 +167,45 @@ const LostPage = () => {
             </div> */}
 
             {/* Color */}
-<div className="mb-4">
+            <div className="mb-4">
   <label className="block text-gray-700 text-sm font-bold mb-2">
     Color
   </label>
-  <input
-    type="color"
+  <select
     className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
     required
-  />
+  >
+    <option value="" disabled selected>Select a color</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    <option value="black">Black</option>
+    <option value="white">White</option>
+    {/* Add more color options as needed */}
+  </select>
 </div>
+
 
 
             {/* Category */}
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2">
-                Category
-              </label>
-              <input
-                type="text"
-                className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
-                placeholder="Category"
-                required
-              />
-            </div>
+  <label className="block text-gray-700 text-sm font-bold mb-2">
+    Category
+  </label>
+  <select
+    className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
+    required
+  >
+    <option value="">Select a category</option>
+    <option value="electronics">Electronics</option>
+    <option value="home-appliances">Home Appliances</option>
+    <option value="clothing">Clothing</option>
+    <option value="furniture">Furniture</option>
+  </select>
+</div>
+
 
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemBrand">
@@ -240,7 +255,7 @@ const LostPage = () => {
 
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="additionalInfo">
-                Additional Information
+                Description
               </label>
               <textarea
                 id="additionalInfo"

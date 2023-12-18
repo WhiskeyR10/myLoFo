@@ -60,11 +60,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
-const HomePage = () => {
+const LoginPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow flex items-center justify-center">
+      <main className="bg-gray-200 flex-grow flex items-center justify-center">
         <div className="max-w-md w-full p-10 bg-gray-50 rounded-md shadow-md">
           <h2 className="text-3xl font-semibold mb-6 text-center">Login</h2>
           <form className="space-y-4">
@@ -112,4 +112,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LoginPage;

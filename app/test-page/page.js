@@ -1,174 +1,96 @@
-'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
-const ItemReportPage = () => {
-  const [showElectronicOptions, setShowElectronicOptions] = useState(false);
-
-  const handleCategoryChange = (event) => {
-    // Check if the selected category is 'electronic'
-    setShowElectronicOptions(event.target.value === 'electronic');
-  };
-
+const TestPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
-        <div className="container mx-auto mt-8 mb-5 p-6 bg-white shadow-md rounded-md max-w-md mx-auto">
-          <h1 className="text-3xl font-bold mb-8 text-center">Submit an Item Report</h1>
+      <main className="bg-gray-200 flex-grow flex items-center justify-center">
+        <div className="max-w-full w-full p-10 bg-gray-50 rounded-md shadow-md">
+        
+            <h1 class="text-2xl font-bold mb-4">Search Results</h1>
 
-          <form>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemName">
-                What was lost/found?
-              </label>
-              <input
-                type="text"
-                id="itemName"
-                name="itemName"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Item description"
-                required
-              />
-            </div>
+       
 
-            {/* Color */}
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2">
-                Color
-              </label>
-              <input
-                type="color"
-                className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:border-blue-500"
-                required
-              />
-            </div>
+            <div className="bg-white p-4 rounded-md shadow-md flex items-center">
+      {/* Image on the left */}
+      <img
+        src="path/to/your/image.jpg"
+        alt="Item Image   "
+        className="w-16 h-16 rounded-full mr-4"
+      />
 
-            {/* Category */}
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemCategory">
-                Category
-              </label>
-              <select
-                id="itemCategory"
-                name="itemCategory"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                onChange={handleCategoryChange}
-                required
-              >
-                <option value="" disabled selected>
-                  Select category
-                </option>
-                <optgroup label="Electronic">
-                  <option value="smartphone">Smartphone</option>
-                  <option value="tablet">Tablet</option>
-                  <option value="laptop">Laptop</option>
-                  <option value="camera">Camera</option>
-                  <option value="printer">Printer</option>
-                </optgroup>
-                <option value="home-appliance">Home Appliance</option>
-                <option value="documents">Documents</option>
-                {/* Add more options as needed */}
-              </select>
-            </div>
+      {/* Details on the right */}
+      <div>
+        <p className="text-lg font-bold">Result 1</p>
+        <p>Color: Blue</p>
+        <p>Category: Electronics</p>
+        <p>Brand: XYZ</p>
+        <p>Date Lost: 2023-01-01</p>
+        <p>Time Lost: 12:00 PM</p>
 
-            {showElectronicOptions && (
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
-                  Subcategory
-                </label>
-                <select
-                  id="electronicSubcategory"
-                  name="electronicSubcategory"
-                  className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                  required
-                >
-                  <option value="" disabled selected>
-                    Select subcategory
-                  </option>
-                  <option value="smartphone">Smartphone</option>
-                  <option value="tablet">Tablet</option>
-                  <option value="laptop">Laptop</option>
-                  {/* Add more subcategory options as needed */}
-                </select>
-              </div>
-            )}
+        {/* User's name and phone numbers */}
+        <p>Founder's Name: Ishub Dhungana</p>
+        <p>Phone Number: +977-9865457541</p>
+      </div>
+    </div>
+              <br></br>
+              
+              <div className="bg-white p-4 rounded-md shadow-md flex items-center">
+      {/* Image on the left */}
+      <img
+        src="path/to/your/image.jpg"
+        alt="Item Image   "
+        className="w-16 h-16 rounded-full mr-4"
+      />
 
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemBrand">
-                Brand
-              </label>
-              <input
-                type="text"
-                id="itemBrand"
-                name="itemBrand"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Brand name"
-                required
-              />
-            </div>
+      {/* Details on the right */}
+      <div>
+        <p className="text-lg font-bold">Result 2</p>
+        <p>Color: Blue</p>
+        <p>Category: Electronics</p>
+        <p>Brand: XYZ</p>
+        <p>Date Lost: 2023-01-01</p>
+        <p>Time Lost: 12:00 PM</p>
 
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemDate">
-                Date Lost/Found
-              </label>
-              <input
-                type="date"
-                id="itemDate"
-                name="itemDate"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                required
-              />
-            </div>
+        {/* User's name and phone numbers */}
+        <p>Founder's Name: Rukshan Raut</p>
+        <p>Phone Number: +977-9856478547</p>
+      </div>
+    </div>
+    <br></br>
 
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemTime">
-                Time Lost/Found
-              </label>
-              <input
-                type="time"
-                id="itemTime"
-                name="itemTime"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                required
-              />
-            </div>
+    <div className="bg-white p-4 rounded-md shadow-md flex items-center">
+      {/* Image on the left */}
+      <img
+        src="path/to/your/image.jpg"
+        alt="Item Image   "
+        className="w-16 h-16 rounded-full mr-4"
+      />
 
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="itemImage">
-                Upload Image
-              </label>
-              <input type="file" id="itemImage" name="itemImage" accept="image/*" className="py-2" />
-            </div>
+      {/* Details on the right */}
+      <div>
+        <p className="text-lg font-bold">Result 3</p>
+        <p>Color: Blue</p>
+        <p>Category: Electronics</p>
+        <p>Brand: XYZ</p>
+        <p>Date Lost: 2023-01-01</p>
+        <p>Time Lost: 12:00 PM</p>
 
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="additionalInfo">
-                Additional Information
-              </label>
-              <textarea
-                id="additionalInfo"
-                name="additionalInfo"
-                rows="4"
-                className="border rounded w-full py-2 px-3 focus:outline-none focus:border-blue-500"
-                placeholder="Additional information about the item"
-              ></textarea>
-            </div>
+        {/* User's name and phone numbers */}
+        <p>Founder's Name: Reejan Neupane</p>
+        <p>Phone Number: +977-9865874578</p>
+      </div>
+    </div>
 
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:border-blue-300"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
         </div>
+      
       </main>
       <Footer />
     </div>
   );
 };
 
-export default ItemReportPage;
+export default TestPage;

@@ -70,18 +70,42 @@ const HomePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow flex items-center justify-center">
+      <main className="bg-gray-200 flex-grow flex items-center justify-center">
         <div className="bg-gray-50 p-8 rounded shadow-md max-w-md w-full">
           <h2 className="text-3xl font-bold mb-4 text-center">Register</h2>
           <form className="space-y-4">
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-gray-600">
-                Username
+              <label htmlFor="firstName" className="block text-sm font-medium text-gray-600">
+                First Name
               </label>
               <input
                 type="text"
-                id="username"
-                name="username"
+                id="firstName"
+                name="firstName"
+                className="mt-1 p-2 w-full border rounded-md"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="lastName" className="block text-sm font-medium text-gray-600">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                className="mt-1 p-2 w-full border rounded-md"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-600">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
                 className="mt-1 p-2 w-full border rounded-md"
                 required
               />
@@ -110,6 +134,18 @@ const HomePage = () => {
                 required
               />
             </div>
+            <div>
+              <label htmlFor="reEnterPassword" className="block text-sm font-medium text-gray-600">
+                Re-enter Password
+              </label>
+              <input
+                type="password"
+                id="reEnterPassword"
+                name="reEnterPassword"
+                className="mt-1 p-2 w-full border rounded-md"
+                required
+              />
+            </div>
             <button
               type="submit"
               className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full"
@@ -125,3 +161,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
