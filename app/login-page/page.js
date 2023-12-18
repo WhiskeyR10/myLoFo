@@ -92,12 +92,14 @@ const LoginPage = () => {
                 required
               />
             </div>
+            <Link href='/home-page'>
             <button
               type="submit"
               className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
             >
               Login
             </button>
+            </Link>
           </form>
           <p className="mt-4 text-gray-600 text-center">
             Don't have an account?{' '}

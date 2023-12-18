@@ -9,7 +9,7 @@ const LandingPage = () => {
         {/* <Link href="/home-page">
          Get Started
         </Link> */}
-        <Link href="/register-page" style={{ border: '1px solid blue', padding: '4px' }}>
+        <Link href="/login-page" style={{ border: '1px solid blue', padding: '4px' }}>
   Get Started
 </Link>
 
